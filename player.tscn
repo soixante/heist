@@ -51,6 +51,7 @@ animation = &"forward"
 shape = SubResource("RectangleShape2D_5l1u2")
 
 [node name="DebugWindow" parent="." instance=ExtResource("6_li7a8")]
+visible = false
 offset_top = 13.0
 offset_bottom = 36.0
 

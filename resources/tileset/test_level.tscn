@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://be25p1ahhfqiq"]
+
+[ext_resource type="Script" path="res://resources/tileset/test_level.gd" id="1_hiw3w"]
+[ext_resource type="PackedScene" uid="uid://dkagcitcf0sd3" path="res://tilemap.tscn" id="1_om7np"]
+[ext_resource type="Texture2D" uid="uid://c65ga5audrtmf" path="res://resources/texture/2d_lights_and_shadows_neutral_point_light.webp" id="2_sojc3"]
+
+[node name="Test_Level" type="Node2D"]
+script = ExtResource("1_hiw3w")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.356863, 0.356863, 0.356863, 1)
+
+[node name="test_level" parent="." instance=ExtResource("1_om7np")]
+
+[node name="violet" type="PointLight2D" parent="."]
+position = Vector2(317, 217.5)
+scale = Vector2(2.75781, 1.99609)
+color = Color(1, 0.733333, 0.992157, 1)
+shadow_enabled = true
+texture = ExtResource("2_sojc3")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+energy = 0.05
+blend_mode = 1
+
+[node name="green" type="PointLight2D" parent="."]
+position = Vector2(506, 376)
+scale = Vector2(2.49512, 1.76172)
+color = Color(0.439216, 1, 0.576471, 1)
+shadow_enabled = true
+texture = ExtResource("2_sojc3")

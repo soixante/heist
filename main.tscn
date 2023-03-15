@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsq78qb436sid"]
+[gd_scene load_steps=3 format=3 uid="uid://bsq78qb436sid"]
 
 [ext_resource type="PackedScene" uid="uid://c2gcab4stncxs" path="res://player.tscn" id="1_rymxh"]
+[ext_resource type="PackedScene" uid="uid://be25p1ahhfqiq" path="res://resources/tileset/test_level.tscn" id="2_7o5qo"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_rymxh")]
+z_index = 1
 position = Vector2(485, 299)
+
+[node name="Test_Level" parent="." instance=ExtResource("2_7o5qo")]
