@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkagcitcf0sd3"]
+
+[ext_resource type="Texture2D" uid="uid://durnrr8pwkx55" path="res://art/Tilesets/grounds.png" id="1_6j0cc"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_880c7"]
+polygon = PackedVector2Array(-9, -7.5, 8, -7.5, 8, 9.5, -9, 9.5)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ywptu"]
+resource_name = "grounds"
+texture = ExtResource("1_6j0cc")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/next_alternative_id = 2
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/custom_data_0 = 10
+0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_880c7")
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -8.5, 3, -8.5, 8.75, -3.5, 9, 4, 4.75, 10.25, -5, 10, -10.25, 4.25, -10.25, -3)
+1:1/next_alternative_id = 2
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/1 = 1
+1:1/1/modulate = Color(0.584314, 0.486275, 0.631373, 1)
+1:1/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/1/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_6vquj"]
+tile_size = Vector2i(32, 32)
+uv_clipping = true
+occlusion_layer_0/light_mask = 1
+physics_layer_0/collision_layer = 1
+navigation_layer_0/layers = 1
+custom_data_layer_0/name = "damage_per_second"
+custom_data_layer_0/type = 2
+sources/0 = SubResource("TileSetAtlasSource_ywptu")
+
+[node name="tilemap" type="TileMap"]
+tile_set = SubResource("TileSet_6vquj")
+format = 2
