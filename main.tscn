@@ -1,12 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://bsq78qb436sid"]
 
-[ext_resource type="PackedScene" uid="uid://c2gcab4stncxs" path="res://player.tscn" id="1_rymxh"]
-[ext_resource type="PackedScene" uid="uid://be25p1ahhfqiq" path="res://resources/tileset/test_level.tscn" id="2_7o5qo"]
+[ext_resource type="PackedScene" uid="uid://8htvnonbut8e" path="res://test_level.tscn" id="2_vhofj"]
+[ext_resource type="PackedScene" uid="uid://bubteowdb8n0x" path="res://boxer.tscn" id="2_xw3vu"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_rymxh")]
-z_index = 1
-position = Vector2(485, 299)
+[node name="Test_Level" parent="." instance=ExtResource("2_vhofj")]
 
-[node name="Test_Level" parent="." instance=ExtResource("2_7o5qo")]
+[node name="boxer" parent="." instance=ExtResource("2_xw3vu")]
+position = Vector2(367, 239)

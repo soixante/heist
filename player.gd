@@ -13,6 +13,7 @@ func _start(pos):
 	show()
 	$CollisionPlayerShape2D.disabled = false
 
+"""
 func _process(delta):
 	var velocity = Vector2.ZERO
 	var rotation_angle = Vector2.ZERO
@@ -37,15 +38,23 @@ func _process(delta):
 	else:
 		$AnimatedPlayerSprite2D.stop()
 
+    move_and_slide(velocity * delta)
 	position += velocity * delta 
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
 	
 	if Input.is_anything_pressed():
-		$DebugWindow.set_text("rotation:" + str(rotation_angle.x + rotation_angle.y))
 		$AnimatedPlayerSprite2D.rotation = (rotation_angle.x + rotation_angle.y) * PI 
 
+"""
 
+func get_input():
+    var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+    velocity = input_direction * speed
+
+func _physics_process(delta):
+    get_input()
+    move_and_slide()
 
 """
 func _on_body_entered(body):

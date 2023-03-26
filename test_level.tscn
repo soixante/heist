@@ -1,31 +1,29 @@
 [gd_scene load_steps=4 format=3 uid="uid://8htvnonbut8e"]
 
 [ext_resource type="Script" path="res://test_level.gd" id="1_ojrsp"]
-[ext_resource type="PackedScene" uid="uid://dkagcitcf0sd3" path="res://tilemap.tscn" id="2_hjv4m"]
 [ext_resource type="Texture2D" uid="uid://c65ga5audrtmf" path="res://resources/texture/2d_lights_and_shadows_neutral_point_light.webp" id="3_bqhor"]
+[ext_resource type="PackedScene" uid="uid://dm13ticihljqi" path="res://simple_grounds_tilemap.tscn" id="3_hrw0e"]
 
 [node name="Test_Level" type="Node2D"]
 script = ExtResource("1_ojrsp")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.356863, 0.356863, 0.356863, 1)
-
-[node name="test_level" parent="." instance=ExtResource("2_hjv4m")]
+color = Color(0.729412, 0.729412, 0.729412, 1)
 
 [node name="violet" type="PointLight2D" parent="."]
-position = Vector2(317, 217.5)
+position = Vector2(720, 558)
 scale = Vector2(2.75781, 1.99609)
 color = Color(1, 0.733333, 0.992157, 1)
 shadow_enabled = true
 texture = ExtResource("3_bqhor")
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-energy = 0.05
-blend_mode = 1
-
 [node name="green" type="PointLight2D" parent="."]
-position = Vector2(506, 376)
+position = Vector2(293, 211)
 scale = Vector2(2.49512, 1.76172)
-color = Color(0.439216, 1, 0.576471, 1)
+color = Color(0.882353, 0.905882, 0.603922, 1)
 shadow_enabled = true
+shadow_color = Color(0.215686, 0.14902, 0.168627, 0)
+shadow_filter = 1
 texture = ExtResource("3_bqhor")
+
+[node name="TileMap" parent="." instance=ExtResource("3_hrw0e")]

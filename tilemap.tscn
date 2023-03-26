@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://ctjxs1if8i3ue" path="res://resources/tileset/tilemap.tres" id="1_sopld"]
 
 [node name="test_level" type="TileMap"]
+position = Vector2(5, -133)
 tile_set = ExtResource("1_sopld")
 format = 2
 layer_0/name = "ground"
