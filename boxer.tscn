@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bubteowdb8n0x"]
+
+[ext_resource type="Script" path="res://boxer.gd" id="1_u667u"]
+[ext_resource type="Texture2D" uid="uid://bgc2p0isuo3ao" path="res://art/characters/boxer.png" id="2_fveyb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fh25w"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fveyb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ljv7"]
+
+[node name="boxer" type="CharacterBody2D"]
+script = ExtResource("1_u667u")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 5
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_fh25w")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1ljv7")
