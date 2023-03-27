@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ppvvupnsreb2"]
+
+[ext_resource type="Script" path="res://TileHelper.gd" id="1_ye22g"]
+
+[node name="TileHelper" type="Node"]
+script = ExtResource("1_ye22g")
