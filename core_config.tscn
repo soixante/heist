@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://3a10fom46k0i"]
+
+[ext_resource type="Script" path="res://CoreConfig.gd" id="1_jia8t"]
+[ext_resource type="PackedScene" uid="uid://c7bhtysgtswvd" path="res://paths.tscn" id="2_nfnmo"]
+
+[node name="core_config" type="Node"]
+script = ExtResource("1_jia8t")
+
+[node name="paths" parent="." instance=ExtResource("2_nfnmo")]
